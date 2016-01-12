@@ -32,7 +32,7 @@ class AccessorVector2 implements TweenAccessor<Vector2> {
                 returnValues[1] = target.y;
                 return 2;
             default:
-                assert false;
+                // should not get here
                 return -1;
         }
     }
@@ -50,7 +50,7 @@ class AccessorVector2 implements TweenAccessor<Vector2> {
                 target.set(newValues[0], newValues[1]);
                 break;
             default:
-                assert false;
+                // should not get here
         }
     }
 }
