@@ -12,6 +12,7 @@ public class Sample extends InputAdapter implements ApplicationListener {
     static {
         samples.put("Hello world", TriangleSample.class);
         samples.put("2D Signed Distance", SignedDistance2DSample.class);
+        samples.put("Tween", TweenSample.class);
     }
 
     public static String[] all() {
