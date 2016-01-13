@@ -1,0 +1,10 @@
+archive: true
+language: java
+jdk:
+    - oraclejdk7
+before_script:
+    - mkdir -p shippable/apks
+script:
+    - ./gradlew clean android:assembleDebug
+after_script:
+    - cp -r android/build/outputs/apk/ shippable/apks/
