@@ -1,0 +1,14 @@
+box: jacekmarchwicki/android:java7-r24-4-1
+build:
+    steps:
+        - script:
+            name: run gradle
+            code: ./gradlew clean android:assembleDebug
+        - script:
+            name: copy output
+            code: cp -r android/build/outputs/apk/* $WERCKER_OUTPUT_DIR
+    after-steps:
+        - slack-notifier:
+            url: $SLACK_URL
+            channel: notifications
+            username: werckerbot
