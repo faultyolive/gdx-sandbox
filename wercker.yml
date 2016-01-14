@@ -10,5 +10,5 @@ build:
     after-steps:
         - slack-notifier:
             url: $SLACK_URL
-            channel: notifications
-            username: werckerbot
+            channel: qa
+            username: wercker
